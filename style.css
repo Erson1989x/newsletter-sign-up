@@ -1,0 +1,220 @@
+/* --- Reset --- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box
+}
+
+:root {
+    --white: #FFFFFF;
+    --gray25: #19182B;
+    --paleNavy: #36384D;
+    --darkNavy: #242742;
+    --vermellion: #FF6155;
+
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    width: 100%;
+    height: 100vh;
+
+}
+
+/* --- Main --- */
+
+.main-container {
+    background-color: var(--white);
+
+}
+
+.newsletter-image {
+    background: url(./assets/images/illustration-sign-up-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 284px;
+}
+
+.newsletter-content {
+  margin: 2.5rem 1.5rem 0 1.5rem;
+}
+
+
+.newsletter-content h1 {
+    font-size: 2.5rem;
+    color: var(--darkNavy);
+    font-weight: 700;
+}
+
+.newsletter-content p {
+    margin-top: 1.5rem;
+    font-size: 16px;
+    color: var(--darkNavy);
+}
+
+
+.newsletter-content ul {
+    margin-top: 1.5rem;
+    font-size: 16px;
+    color: var(--darkNavy);
+    line-height: 28px;
+    font-weight: 400;
+    list-style: none;
+}
+
+
+.newsletter-content ul li{
+    position: relative;
+    margin-top: 0.6rem;
+    padding-left: 2rem;
+}
+
+.newsletter-content ul li::before {
+    content: url(./assets/images/icon-list.svg);
+    vertical-align: middle;
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    left: -30px;
+    top: 0px;
+    margin-left: 1.5rem;
+}
+
+/* --- Form --- */
+
+.newsletter-form {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.newsletter-form label {
+    font-size: 12px;
+    color: var(--darkNavy);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+
+}
+
+.newsletter-form input {
+    width: 327px;
+    height: 56px;
+    padding: 16px 149px 16px 24px;
+    border-radius: 0.5rem;
+    border: 1px solid var(--gray25);
+}
+
+.newsletter-form button {
+    margin-top: 1.5rem;
+    width: 327px;
+    height: 56px;
+    border-radius: 0.5rem;
+    background-color: var(--darkNavy);
+    color: var(--white);
+    font-weight: 700;
+    padding: 18px 48px 16px 48px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 2.5rem;
+}
+
+/* --- Success-Card --- */
+
+.success-card {
+    margin:6.5rem 1.5rem 2.5rem 1.5rem;
+}
+
+.success-card h1 {
+    margin-top: 2.5rem;
+    font-size: 2.5rem;
+    color: var(--darkNavy);
+    font-weight: 700;
+}
+
+.success-card p {
+    margin-top: 1.5rem;
+    font-size: 16px;
+    color: var(--darkNavy);
+}
+
+
+.success-card button {
+    margin-top: 12rem;
+    width: 327px;
+    height: 56px;
+    border-radius: 0.5rem;
+    background-color: var(--darkNavy);
+    color: var(--white);
+    font-weight: 700;
+    padding: 18px 48px 16px 48px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.email {
+    font-weight: 700;
+}
+
+.show-hidden {
+    display: none;
+}
+
+/* --- Media Queries --- */
+
+@media (min-width: 400px) {
+    body {
+        background-color: var(--paleNavy);
+    }
+
+
+    .success-card {
+        margin-left: auto;
+        margin-right: auto;
+        max-height: 520px;
+        max-width: 504px;
+        border-radius: 0.5rem;
+        background: var(--white);
+        flex-direction: column;
+        padding: 3rem 4rem 4rem 4rem;
+    
+
+    }
+    .success-card button {
+        margin-top: 2.5rem;
+        align-items: center;
+        width: 100%;
+    }
+    
+
+    .main-container {
+        margin-top: 12rem;
+        max-width: 928px;
+        max-height: 641px;
+        display: flex;
+        flex-direction: row-reverse;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 1rem;
+    }
+
+    .newsletter-image {
+        background: url(./assets/images/illustration-sign-up-desktop.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        margin: 1.5rem;
+        width:376px;
+        height:569px;
+        border-radius: 1rem;
+    }
+
+    .newsletter-content {
+        margin: 6rem 0 6rem 4rem;
+    }
+
+}
