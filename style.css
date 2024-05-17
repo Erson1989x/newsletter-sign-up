@@ -12,6 +12,8 @@
     --paleNavy: #36384D;
     --darkNavy: #242742;
     --vermellion: #FF6155;
+    --gradient: #FF527B;
+    --errorInput : #FF6155;
 
 }
 
@@ -121,8 +123,35 @@ body {
     cursor: pointer;
     font-size: 14px;
     margin-bottom: 2.5rem;
+    border: var(--vermellion);
+   
 }
 
+.newsletter-form button:hover {
+    background-color: var(--gradient);
+    transition: all 0.2s ease;
+    box-shadow: 0px 8px 16px -4px var(--vermellion);
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.invalid-input::placeholder {
+    color: var(--vermellion);
+}
+
+.invalid-input {
+    background-color: #fee6e4f9;
+    border: var(--vermellion);
+    color: var(--vermellion);
+}
+
+input.invalid-input {
+    border-color: var(--vermellion) !important;
+  }
 /* --- Success-Card --- */
 
 .success-card {
@@ -155,6 +184,14 @@ body {
     border: none;
     cursor: pointer;
     font-size: 14px;
+    border: var(--vermellion);
+}
+
+.success-card button:hover {
+    background-color: var(--gradient);
+    transition: all 0.2s ease;
+    box-shadow: 0px 8px 16px -4px var(--vermellion);
+
 }
 
 .email {
@@ -215,6 +252,10 @@ body {
 
     .newsletter-content {
         margin: 6rem 0 6rem 4rem;
+    }
+
+    .error-message {
+        margin-right: 7.2rem;
     }
 
 }
